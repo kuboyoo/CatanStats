@@ -153,6 +153,21 @@ table > tbody > tr + tr > td {
 	border-top: 1px solid;
 }
 
+/* プレイヤー別カラー設定 */
+.Ishida {
+  border-left: 5px solid red;
+}
+.Ohnishi {
+  border-left: 5px solid orange;
+}
+.Kubo {
+  border-left: 5px solid #f2dfbb;
+}
+.Nisaka {
+  border-left: 5px solid navy;
+}
+
+
 .record {
   display: flex;
   align-items: flex-start;

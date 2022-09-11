@@ -251,6 +251,12 @@ def printMD(LB: pd.DataFrame, rec: dict, year: str, md_path: Path, graph_path: s
   html = html.replace("<h3>", "<div class=\"record\">\n<h3>")
   html = html.replace("<div class=\"record\">\n<h3>", "</div>\n<div class=\"record\">\n<h3>")
   html = html.replace("h3", "div")
+
+  for name in LB["プレイヤー"]:
+    src = "<td align=\"left\">%s</td>" % name
+    dst = "<td align=\"left\" class=\"%s\">%s</td>" % (name, name)
+    html = html.replace(src, dst)
+
   saveTxt(html, md_path.with_suffix(".html"))
 
 #順位表, 全体記録, 個人記録, その他指標 の計算
@@ -264,7 +270,7 @@ def summarize(DF: pd.DataFrame, fmts: list):
 
 def main(da_path, graph_path, year):
   names = ['Ishida','Kubo', 'Nisaka', 'Ohnishi']
-  colors = ['red', 'navajowhite', 'darkblue', 'orange']
+  colors = ['red', '#f2dfbb', 'darkblue', 'orange']
   results, xticks = loadData(da_path, year)
   DF, X = calcNumWins(results, names)
   DF.to_csv("./catan_record_%s.csv" % year, index=None)
