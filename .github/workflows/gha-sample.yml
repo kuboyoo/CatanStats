@@ -2,6 +2,7 @@ name: Update Record
 
 on:
   push:
+    paths: results_all.da #データが更新されたら
     branches:
       - main
     workflow_dispatch:
@@ -22,3 +23,9 @@ jobs:
         run: python plot_graph.py results_all.da all
       - name: Run Python (2022 data plot)
         run: python plot_graph.py results_all.da 2022
+
+      - name: commit files
+        run: |
+          git add .
+          git commit -m "Update all record"
+          git push
