@@ -3,9 +3,9 @@ name: Update Record
 on:
   push:
     paths: results_all.da #データが更新されたら
-    branches:
-      - main
-    workflow_dispatch:
+    #branches:
+    #  - main
+    #workflow_dispatch:
 
 jobs:
   plot-graph:
