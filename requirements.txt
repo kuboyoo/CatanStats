@@ -1,5 +1,5 @@
 matplotlib
 pandas
-japanise_matplotlib
+japanize-matplotlib
 numpy
 mistletoe
