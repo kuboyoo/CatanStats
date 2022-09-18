@@ -19,6 +19,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Run Python (all data plot)
-        run: python plot_graph.py result_all.da all
+        run: python plot_graph.py results_all.da all
       - name: Run Python (2022 data plot)
-        run: python plot_graph.py result_all.da 2022
+        run: python plot_graph.py results_all.da 2022
