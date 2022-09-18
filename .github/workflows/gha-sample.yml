@@ -1,0 +1,24 @@
+name: Update Record
+
+on:
+  push:
+    branches:
+      - master
+    workflow_dispatch:
+
+jobs:
+  numpy-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/sheckout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+          architecture: 'x64'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run Python (all data plot)
+        run: python plot_graph.py all
+      - name: Run Python (2022 data plot)
+        run: python plot_graph.py 2022
