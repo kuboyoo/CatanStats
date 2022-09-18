@@ -3,7 +3,7 @@ name: Update Record
 on:
   push:
     branches:
-      - master
+      - main
     workflow_dispatch:
 
 jobs:
