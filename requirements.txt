@@ -3,3 +3,4 @@ pandas
 japanize-matplotlib
 numpy
 mistletoe
+tabulate
