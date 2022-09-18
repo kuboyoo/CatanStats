@@ -26,6 +26,8 @@ jobs:
 
       - name: commit files
         run: |
+          git config --global user.email kubo@vrl.sys.wakayama-u.ac.jp
+          git config --global user.name kuboyu
           git add .
           git commit -m "Update all record"
           git push
