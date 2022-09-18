@@ -63,8 +63,3 @@ date,year,month,day,game_id,online,yoshi,winner
 2022-09-03,2022,9,3,1,True,False,Ishida
 2022-09-03,2022,9,3,2,True,False,Kubo
 2022-09-03,2022,9,3,3,True,False,Kubo
-2022-09-18,2022,9,18,1,False,False,Kubo
-2022-09-18,2022,9,18,2,False,False,Kubo
-2022-09-18,2022,9,18,3,False,False,Kubo
-2022-09-18,2022,9,18,4,False,False,Kubo
-2022-09-18,2022,9,18,5,False,False,Ohnishi
